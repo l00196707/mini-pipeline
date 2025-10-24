@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.so
+*.egg
+*.egg-info/
+.env
+.venv/
+venv/
+ENV/
+env/
+Pipfile.lock
+.pytest_cache/
+.cache/
+.mypy_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# IDEs / Editors
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Logs
+*.log
