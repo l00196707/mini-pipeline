@@ -28,3 +28,24 @@ htmlcov/
 
 # Logs
 *.log
+
+# Docker
+docker-compose.override.yml
+*.tar
+*.img
+
+# Terraform
+terraform.tfstate
+terraform.tfstate.backup
+crash.log
+.terraform/
+.terraform.lock.hcl
+*.tfvars
+*.tfvars.json
+
+# SSH / Keys
+*.pem
+*.key
+id_rsa
+id_ed25519
+.ssh/
