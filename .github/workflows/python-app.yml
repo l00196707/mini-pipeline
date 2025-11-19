@@ -81,8 +81,10 @@ jobs:
     
     - name: Terraform Init
       run: terraform init
+      working-directory: ./terraform
 
     - name: Terraform Apply
       run: |
         terraform apply -auto-approve \
         -var "docker_username=${{ secrets.DOCKERHUB_USERNAME }}"
+      working-directory: ./terraform
