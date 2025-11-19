@@ -2,11 +2,6 @@ provider "aws" {
   region = "us-east-1"
 }
 
-resource "aws_key_pair" "deployer"{
-    key_name = "pipeline-key"
-    public_key = file("~/.ssh/id_rsa.pub")
-}
-
 resource "aws_security_group" "app_sg"{
     name = "app_sg"
     description = "Allow HTTP"
@@ -42,7 +37,7 @@ variable "docker_username" {
 resource "aws_instance" "app_server" {
   ami           = "ami-0cae6d6fe6048ca2c"
   instance_type = "t2.micro"
-  key_name      = aws_key_pair.deployer.key_name
+  key_name      = "ec2-key"
   security_groups = [aws_security_group.app_sg.name]
 
   user_data = <<EOF
