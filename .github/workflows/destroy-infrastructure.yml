@@ -1,3 +1,4 @@
+# Workflow to manually teardown infrastructure
 name: Destroy Infrastructure
 
 on:
