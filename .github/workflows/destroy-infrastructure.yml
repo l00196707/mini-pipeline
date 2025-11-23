@@ -34,7 +34,6 @@ jobs:
               run: terraform init
               working-directory: ./terraform
 
-
             - name: Terraform Destroy
               run: terraform destroy -auto-approve -var="docker_username=$DOCKERHUB_USERNAME"
               working-directory: ./terraform
