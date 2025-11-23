@@ -13,6 +13,12 @@ jobs:
         steps:
             - uses: actions/checkout@v4
 
+            - name: Download Terraform State
+              uses: actions/download-artifact@v4
+              with:
+                name: terraform-state
+                path: ./terraform
+
             - name: Set up Terraform
               uses: hashicorp/setup-terraform@v3
 
@@ -26,6 +32,9 @@ jobs:
             
             - name: Terraform Init
               run: terraform init
+              working-directory: ./terraform
+
 
             - name: Terraform Destroy
               run: terraform destroy -auto-approve -var="docker_username=$DOCKERHUB_USERNAME"
+              working-directory: ./terraform
