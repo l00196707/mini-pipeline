@@ -89,8 +89,8 @@ jobs:
         -var "docker_username=${{ secrets.DOCKERHUB_USERNAME }}"
       working-directory: ./terraform
 
-      name: Upload Terraform State
-        uses: actions/upload-artifact@v4
-        with:
-          name: terraform-state
-          path: ./terraform/terraform.tfstate
+    - name: Upload Terraform State
+      uses: actions/upload-artifact@v4
+      with:
+        name: terraform-state
+        path: ./terraform/terraform.tfstate
