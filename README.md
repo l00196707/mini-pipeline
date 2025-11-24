@@ -101,5 +101,3 @@ terraform destroy -auto-approve
 - ALB + Auto Scaling Group
 - Prometheus + Grafana monitoring
 - Secrets Manager for sensitive values
-- Push versioned Docker tags
-  
