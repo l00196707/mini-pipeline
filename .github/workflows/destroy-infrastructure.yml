@@ -9,10 +9,10 @@ jobs:
         runs-on: ubuntu-latest
         env:
                 DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
-
+        
         steps:
             - uses: actions/checkout@v4
-
+            #download artifact
             - name: Download Terraform State
               uses: actions/download-artifact@v4
               with:
