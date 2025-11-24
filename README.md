@@ -22,6 +22,12 @@ This project implements:
 - Docker image built with Buildx
 - Multi architecture images (amd64, arm64)
 - Automatic push to Docker Hub
+
+### Architecture Flow
+1. Code pushed → CI runs (lint, test, SonarQube)
+2. Docker image builds & pushes
+3. Terraform is applied → EC2 created → Docker container starts automatically
+4. Output: public IP of deployed Flask app
   
 ### Infrastructure as code (IaC)
 - Deployment to AWS using Terraform
